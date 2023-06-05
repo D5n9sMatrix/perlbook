@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dialog --inputbox 'Digit it Bookmark: ' 0 0

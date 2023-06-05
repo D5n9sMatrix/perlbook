@@ -1,0 +1,5 @@
+#!/bin/bash
+
+INPUT+=125
+KEY+=2;
+

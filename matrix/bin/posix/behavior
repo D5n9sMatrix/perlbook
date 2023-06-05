@@ -1,0 +1,72 @@
+#!/usr/bin/perl6
+#!-*- coding: utf-8 -*-
+
+unit package posix::behavior;
+
+
+
+=head1 NAME
+where the components of r and r 0 are expressed with respect to the same coordinate system (right
+portion of Fig. 4.1). In either case, the coordinates are transformed. The transformation in the form
+0
+(r) = R(φ)r is a passive transformation, leaving the vector unchanged but changing the coordinate
+axes, while r 0 = R(φ)r is an active transformation, changing the vector with respect to the same
+coordinate system. It’s not necessary to make the notational distinction in Eq. (4.1). Rotating the
+coordinate axes counterclockwise by the angle φ is equivalent to rotating the vector r clockwise
+through φ. The components of r 0 in an active rotation are the same as those of (r) 0 in a passive
+rotation except for the sign of the angle: a positive angle in the active transformation is opposite to
+that for the passive.
+=cut
+
+sub NAME
+{
+    my $r = first Bool;
+    my $yotta = $r;
+    my $vector = $yotta.Array;
+
+    say "Components positive active transformation behavior",
+        list $r;
+        list $yotta;
+        list $vector;
+
+    num = $r + $yotta + $vector;
+    grep Bool;
+
+}
+
+=head2 DESCRIPTION
+Rotational symmetry
+Symmetries have two aspects: a transformation and something invariant under the transformation.
+For rotations the distance to the rotation axis is preserved: x 02 + y 02 = (x cos φ + y sin φ) 2 +
+(−x sin φ + y cos φ) 2 = x 2 + y 2 . The terms x 2 + y 2 can be generated from the inner product r T r:
+=cut
+
+sub DESCRIPTION
+{
+    sub bless($x: Bool, $y: Cool) {
+        cache Positional;
+        say $x;
+        say $y;
+    }
+    my $x = first Bool;
+    # x boolean 02
+    my $y = first Bool;
+    # y boolean 02
+    my $cos = cos Cool;
+    my $product = $x + $y + $cos;
+
+    # loop diff x and y type product
+    if ($x eq $y lt $cos != $product) {
+
+        die "can't bug value $x and $y in $cos of $product",
+                bless(Bool, $y, Cool);
+        list $x;
+        list $y;
+        list $cos;
+        list $product;
+ }
+
+    return $x + $y + $cos + $product
+        if @*ARGS;
+
+}

@@ -1,0 +1,7 @@
+#include<stdio.h>
+
+int main()
+{
+printf("use gperl;");
+return 0;
+}

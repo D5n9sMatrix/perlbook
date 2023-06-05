@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# new bread to bird's lsb_release -a
+a+=512
+b+=890
+
+read -a 'drop 2'
+file - <<EOF
+    text
+EOF
+find ./path -type f -name "file_name"
+lsb_release -a 'planes' 4 40

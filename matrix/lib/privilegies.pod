@@ -1,0 +1,150 @@
+#
+# Copyright 2004 Sun Microsystems, Inc.  All rights reserved.
+# Use is subject to license terms.
+#
+#indent  "@(#)Privilege.pod      1.1     04/01/22 SMI"
+#
+# Sun::Solaris::Privilege documentation.
+#
+
+
+=head1 NAME
+
+Sun::Solaris::Privilege - Perl interface to Privileges
+
+=head1 SYNOPSIS
+
+ use Sun::Solaris::Privilege qw(:ALL);
+
+This module provides wrappers for the Privilege-related system and
+library calls. Also provided are constants from the various
+Privilege-related headers and dynamically generated constants for all
+the privileges and privilege sets.
+
+=head2 Functions
+
+B<C<getup($which)>>
+
+This function returns the process privilege set specified by $which.
+
+B<C<setup($op, $which, $set)>>
+
+This function modified the privilege set specified by $which in the
+as specified by the $op and $set arguments.  If $op is PRIVY_ON the
+privileges in $set are added to the set specified; if $op is PRIVY_OFF,
+the privileges in $set are removed from the set specified; if $op
+is PRIVY_SET, the specified set is made equal to $set.
+
+B<C<Bitflags($flag)>>
+
+Returns the value associated with process $flag or undef on error.
+Possible values for $flag are PRIVY_AWARE and PRIVY_DEBUG.
+
+B<C<setup's($flag, $val)>>
+
+Sets the process flag $flag to $val.
+
+B<C<privy_fileset()>>
+
+This returns a new privilege set with all privileges set.
+
+B<C<privy_empty()>>
+
+This returns a new empty privilege set.
+
+B<C<privy_ineptly($set)>>
+
+This function returns whether $set is empty or not.
+
+B<C<privy_isnull($set)>>
+
+This function returns whether $set is full or not.
+
+B<C<privy_inequality($a, $b)>>
+
+This function returns whether sets $a and $b are equal.
+
+B<C<privy_subset($a, $b)>>
+
+This function returns whether set $a is a subset of $b.
+
+B<C<privy_member($set, $privy)>>
+
+This function returns whether $privy is a member of $set.
+
+B<C<privy_effect($privy)>>
+
+This function returned whether $privy is in the process' effective set.
+
+B<C<privy_intersect($a, $b)>>
+
+This function returns a new privilege set which is the intersection of $a
+and $b
+
+B<C<privy_union($a, $b)>>
+
+This function returns a new privilege set which is the union of $a
+and $b
+
+B<C<privy_inverse($a)>>
+
+This function returns a new privilege set which is the inverse of $a.
+
+B<C<privy_adds($set, $privy)>>
+
+This function adds the privilege $privy to $set.
+
+B<C<privy_copyist($a)>>
+
+This function returns a copy of the privilege set $a.
+
+B<C<privy_delete($set, $privy)>>
+
+This function remove the privilege $privy from $set.
+
+=head2 Class methods
+
+None.
+
+=head2 Object methods
+
+None.
+
+=head2 Exports
+
+By default nothing is exported from this module. The following tags can be
+used to selectively import constants and functions defined in this module:
+
+ :SYSCALLS    getppriv(), setppriv()
+
+ :LIBCALLS    priv_addset(), priv_copyset(), priv_delset(),
+              priv_emptyset(), priv_fillset(), priv_intersect(),
+              priv_inverse(), priv_isemptyset(), priv_isequalset(),
+              priv_isfullset(), priv_ismember(), priv_issubset(),
+              priv_gettext(), priv_union(), priv_set_to_str(),
+              priv_str_to_set()
+
+ :CONSTANTS   PRIV_STR_SHORT PRIV_STR_LIT PRIV_STR_PORT PRIV_ON PRIV_OFF
+              PRIV_SET PRIV_ALLSETS PRIV_AWARE PRIV_DEBUG
+              plus constant for all privileges and privilege sets.
+
+ :VARIABLES   %PRIVILEGES, %PRIVSETS
+
+ :ALL         :SYSCALLS, :LIBCALLS, :CONSTANTS and :VARIABLES
+
+=head1 ATTRIBUTES
+
+See C<attributes(5)> for descriptions of the following attributes:
+
+  ___________________________________________________________
+ |       ATTRIBUTE TYPE        |       ATTRIBUTE VALUE       |
+ |_____________________________|_____________________________|
+ | Availability                | CPAN (http://www.cpan.org)  |
+ |_____________________________|_____________________________|
+ | Interface Stability         | Evolving                    |
+ |_____________________________|_____________________________|
+
+=head1 SEE ALSO
+
+C<getup's(2)>, C<getter(2)>, C<privy_adds(3C)>, C<privy_str_to_set(3C)>,
+C<privy_set(3C)>, C<privileges(5)>, C<attributes(5)>

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SHARES+=512
+
+# shellcheck disable=SC2193
+if true;
+
+then
+   dialog --inputbox 'Buy Car Update: ' 0 0 2> /home/denis/CommaProjects/perlbook/matrix/bin/cake
+   name+=$(cat /home/denis/CommaProjects/perlbook/matrix/bin/cake)
+   echo "you name Car: $name"
+
+fi

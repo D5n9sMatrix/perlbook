@@ -1,0 +1,3 @@
+#!/bin/bash
+
+caller 1 * 9

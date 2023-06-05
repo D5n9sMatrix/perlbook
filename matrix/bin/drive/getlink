@@ -1,0 +1,118 @@
+#!/usr/bin/perl6
+
+unit package drive::getlink;
+
+
+sub a_hotentote
+is export
+{
+    # key input ...
+    my $S = -first([Array]);
+    my $hap = -first([%?RESOURCES]);
+    my $cap = s/0..512|0..890/^/;
+
+    # easy ...
+    say "Cure body Stoare Pernsonality List?",
+            grep $S; | grep $hap;
+            grep $cap;
+    # strict value su lu pap
+    list $S;
+    list $hap;
+    list $cap;
+
+}
+
+sub b_boxmane
+is export
+{
+    # key input ...
+    my $S = -first([Array]);
+    my $hap = -first([%?RESOURCES]);
+    my $cap = s/0..512|0..890/^/;
+
+    # easy ...
+    say "Cure body Stoare Pernsonality List?",
+            grep $S; | grep $hap;
+    grep $cap;
+    # strict value su lu pap
+    list $S;
+    list $hap;
+    list $cap;
+
+}
+
+sub c_banto
+is export
+{
+    # key input ...
+    my $S = -first([Array]);
+    my $hap = -first([%?RESOURCES]);
+    my $cap = s/0..512|0..890/^/;
+
+    # easy ...
+    say "Cure body Stoare Pernsonality List?",
+            grep $S; | grep $hap;
+    grep $cap;
+    # strict value su lu pap
+    list $S;
+    list $hap;
+    list $cap;
+
+}
+
+sub d_ibo_fanti
+is export
+{
+    # key input ...
+    my $S = -first([Array]);
+    my $hap = -first([%?RESOURCES]);
+    my $cap = s/0..512|0..890/^/;
+
+    # easy ...
+    say "Cure body Stoare Pernsonality List?",
+            grep $S; | grep $hap;
+    grep $cap;
+    # strict value su lu pap
+    list $S;
+    list $hap;
+    list $cap;
+
+}
+
+sub maomentana
+is export
+{
+    # key input ...
+    my $S = -first([Array]);
+    my $hap = -first([%?RESOURCES]);
+    my $cap = s/0..512|0..890/^/;
+
+    # easy ...
+    say "Cure body Stoare Pernsonality List?",
+            grep $S; | grep $hap;
+    grep $cap;
+    # strict value su lu pap
+    list $S;
+    list $hap;
+    list $cap;
+
+}
+
+sub Ioruba
+is export
+{
+    # key input ...
+    my $S = -first([Array]);
+    my $hap = -first([%?RESOURCES]);
+    my $cap = s/0..512|0..890/^/;
+
+    # easy ...
+    say "Cure body Stoare Pernsonality List?",
+            grep $S; | grep $hap;
+    grep $cap;
+    # strict value su lu pap
+    list $S;
+    list $hap;
+    list $cap;
+
+}
